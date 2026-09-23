@@ -251,7 +251,6 @@ class SistemaEscolar(ctk.CTk):
 
         ctk.CTkLabel(
             esquerda,
-            text="📚",
             font=("Segoe UI Emoji", 64),
             text_color="white"
         ).pack(pady=(105, 15))
@@ -422,7 +421,7 @@ class SistemaEscolar(ctk.CTk):
 
         ctk.CTkLabel(
             topo,
-            text="📚  DARCY ORGANIZADO",
+            text="DARCY ORGANIZADO",
             text_color="white",
             font=("Segoe UI", 17, "bold")
         ).pack(side="left", padx=25)
@@ -457,11 +456,11 @@ class SistemaEscolar(ctk.CTk):
             font=("Segoe UI", 9, "bold")
         ).pack(anchor="w", padx=18, pady=(22, 8))
 
-        self.menu_botao(menu, "🏠  Início", self.mostrar_dashboard)
-        self.menu_botao(menu, "📚  Biblioteca", self.mostrar_biblioteca)
-        self.menu_botao(menu, "📋  Minhas Reservas", self.mostrar_reservas)
-        self.menu_botao(menu, "👕  Uniformes", self.mostrar_uniformes)
-        self.menu_botao(menu, "📦  Minhas Solicitações", self.mostrar_solicitacoes)
+        self.menu_botao(menu, "Início", self.mostrar_dashboard)
+        self.menu_botao(menu, "Biblioteca", self.mostrar_biblioteca)
+        self.menu_botao(menu, "Minhas Reservas", self.mostrar_reservas)
+        self.menu_botao(menu, "Uniformes", self.mostrar_uniformes)
+        self.menu_botao(menu, "Minhas Solicitações", self.mostrar_solicitacoes)
 
         if self.usuario_atual["cargo"] == "Administrador":
             ctk.CTkLabel(
@@ -479,7 +478,7 @@ class SistemaEscolar(ctk.CTk):
 
         self.criar_botao(
             menu,
-            "🚪  Sair",
+            "Sair",
             self.sair,
             "#64748B",
             12,
@@ -537,7 +536,7 @@ class SistemaEscolar(ctk.CTk):
 
     def mostrar_dashboard(self):
         area = self.criar_layout(
-            f"Olá, {self.usuario_atual['nome'].split()[0]}! 👋",
+            f"Olá, {self.usuario_atual['nome'].split()[0]}! ",
             "Escolha uma opção para começar."
         )
 
@@ -583,22 +582,22 @@ class SistemaEscolar(ctk.CTk):
             cards.columnconfigure(i, weight=1)
 
         self.card_info(
-            cards, 0, "📚", "LIVROS",
+            cards, 0,"LIVROS",
             total_livros, "cadastrados"
         )
 
         self.card_info(
-            cards, 1, "🟢", "DISPONÍVEIS",
+            cards, 1,  "DISPONÍVEIS",
             disponiveis, "exemplares"
         )
 
         self.card_info(
-            cards, 2, "📋", "RESERVAS",
+            cards, 2, "RESERVAS",
             minhas_reservas, "suas reservas"
         )
 
         self.card_info(
-            cards, 3, "👕", "SOLICITAÇÕES",
+            cards, 3, "SOLICITAÇÕES",
             minhas_solicitacoes, "de uniformes"
         )
 
@@ -614,13 +613,13 @@ class SistemaEscolar(ctk.CTk):
         bloco.rowconfigure(0, weight=1)
 
         self.dashboard_acao(
-            bloco, 0, 0, "📚", "Biblioteca",
+            bloco, 0, 0, "Biblioteca",
             "Consulte livros e faça reservas.",
             self.mostrar_biblioteca
         )
 
         self.dashboard_acao(
-            bloco, 0, 1, "👕", "Uniformes",
+            bloco, 0, 1, "Uniformes",
             "Veja tamanhos, cores e solicite peças.",
             self.mostrar_uniformes
         )
@@ -846,7 +845,7 @@ class SistemaEscolar(ctk.CTk):
 
         self.criar_botao(
             botoes,
-            "📖 Reservar livro",
+            "Reservar livro",
             self.reservar_selecionado,
             "#16A34A",
             18,
@@ -1185,7 +1184,7 @@ class SistemaEscolar(ctk.CTk):
 
         self.criar_botao(
             botoes,
-            "👕 Solicitar uniforme",
+            "Solicitar uniforme",
             self.solicitar_uniforme,
             "#16A34A",
             20,
